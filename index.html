@@ -45,25 +45,22 @@
       </section>
       <!-- header -->
       <header class="header">
-        <div class="header__projects">
-          <button class="header__projects__btn">
-            <i class="fa-solid fa-bars"></i>
-            <!-- <i class="fa-solid fa-xmark"></i> -->
-          </button>
-          <h2 class="header__projects__heading">PROJECTS</h2>
-        </div>
-        <div class="header__logo">KOBAYASHI Clone</div>
-        <div class="header__all">
-          <button class="header__all__btn">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
-          <h2 class="header__all__heading">ALL</h2>
-        </div>
+        <button class="header__projects__btn">
+          <i class="fa-solid fa-bars header__projects__icon"></i>
+          <!-- <i class="fa-solid fa-xmark"></i> -->
+          <h2>PROJECTS</h2>
+        </button>
+        <div class="header__logo">KOBAYASHI SITE</div>
+        <button class="header__all__btn">
+          <i class="fa-solid fa-magnifying-glass header__all__icon"></i>
+          <h2>ALL</h2>
+        </button>
       </header>
-      <div class="menu">
+      <aside class="menu">
+        <div class="overlay hidden"></div>
         <!-- Left Menu -->
-        <aside class="menu__projects">
-          <ul class="menu__projects">
+        <nav class="menu__projects hidden">
+          <ul class="menu__projects__ul">
             <li class="menu__projects__list"><a href="#">PROJECTS</a></li>
             <li class="menu__projects__list"><a href="#">NEWS</a></li>
             <li class="menu__projects__list"><a href="#">PROFILE</a></li>
@@ -74,16 +71,16 @@
             <li class="menu__projects__list"><a href="#">FACEBOOKS</a></li>
             <li class="menu__projects__list"><a href="#">INSTAGRAM</a></li>
           </ul>
-        </aside>
+        </nav>
         <!-- Right menu -->
-        <aside class="menu__all">
-          <ul class="all__menu">
-            <li class="menu__all__list">
+        <nav class="menu__all hidden">
+          <ul class="menu__all__ul">
+            <li class="menu__all__list clicked">
               <a href="#">ALL</a>
             </li>
-            <li class="menu__all__list">
+            <li class="menu__all__list" data-type="furniture">
               <a href="#">FURNITURE</a>
-              <ul class="menu__all__hover hidden">
+              <ul class="menu__all__hover menu__all__furniture hidden">
                 <li class="hover__list">
                   <h5 class="hover__list__heading">FURNITURE</h5>
                   <a href="#" class="hover__list__contents">ALL ITEMS</a>
@@ -104,9 +101,9 @@
                 </li>
               </ul>
             </li>
-            <li class="menu__all__list">
-              <a href="#">PRODUCT</a>
-              <ul class="menu__all__hover hidden">
+            <li class="menu__all__list" data-type="product">
+              <a href="#" class="menu__product">PRODUCT</a>
+              <ul class="menu__all__hover menu__all__product hidden">
                 <li class="hover__list">
                   <h5 class="hover__list__heading">PRODUCT</h5>
                   <a href="#" class="hover__list__contents">ALL ITEMS</a>
@@ -127,9 +124,9 @@
                 </li>
               </ul>
             </li>
-            <li class="menu__all__list">
-              <a href="#">SPACE</a>
-              <ul class="menu__all__hover hidden">
+            <li class="menu__all__list" data-type="space">
+              <a href="#" class="menu__space">SPACE</a>
+              <ul class="menu__all__hover menu__all__space hidden">
                 <li class="hover__list">
                   <h5 class="hover__list__heading">SPACE</h5>
                   <a href="#" class="hover__list__contents">ALL ITEMS</a>
@@ -150,9 +147,9 @@
                 </li>
               </ul>
             </li>
-            <li class="menu__all__list">
-              <a href="#">OTHERS</a>
-              <ul class="menu__all__hover hidden">
+            <li class="menu__all__list" data-type="others">
+              <a href="#" class="menu__others">OTHERS</a>
+              <ul class="menu__all__hover menu__all__others hidden">
                 <li class="hover__list">
                   <h5 class="hover__list__heading">OTHERS</h5>
                   <a href="#" class="hover__list__contents">ALL ITEMS</a>
@@ -174,8 +171,8 @@
               </ul>
             </li>
           </ul>
-        </aside>
-      </div>
+        </nav>
+      </aside>
       <!-- main -->
       <main class="main">
         <ul class="main__container">
