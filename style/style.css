@@ -2,7 +2,7 @@
 :root {
   --font-family: "Inter", sans-serif;
 
-  --font-small: 10px;
+  --font-small: 12px;
   --font-medium: 14px;
   --font-large: 18px;
   --font-title: 38px;
@@ -10,7 +10,7 @@
   --fontweight-bold: 600;
   --fontweight-title: 800;
 
-  --color-lightGray: #e5e5e5;
+  --color-lightGray: #ededed;
   --color-gray: #d3d3d3;
   --color-font: #0d0d0d;
   --color-title: #131313;
@@ -376,21 +376,21 @@ button {
 
 .menu__all .menu__all__ul .menu__all__list {
   letter-spacing: 1.5px;
-  font-weight: var(--fontweight-bold);
   width: 100%;
   height: auto;
   padding: 1.7em var(--size-xlarge);
   cursor: pointer;
   z-index: 300;
 }
-
+.menu__all .menu__all__ul .menu__all__list > a {
+  font-weight: var(--fontweight-bold);
+}
 .menu__all .menu__all__ul .menu__all__list:hover {
   background-color: var(--color-lightGray);
 }
 
 .menu__all__list .menu__all__hover {
-  /* background-color: var(--color-lightGray); */
-  background-color: lightblue;
+  background-color: var(--color-lightGray);
   position: absolute;
   /* position: fixed; */
   width: var(--side-main-width);
@@ -398,6 +398,40 @@ button {
   top: 0;
   left: var(--side-left);
   padding: var(--size-large);
+}
+
+.hover__list {
+  margin-bottom: var(--size-xlarge);
+  display: flex;
+  flex-direction: column;
+}
+.hover__list .hover__list__heading {
+  margin-bottom: var(--size-medium);
+  font-weight: var(--fontweight-bold);
+  letter-spacing: var(--letter-spacing);
+}
+.hover__list .hover__list__contents {
+  width: fit-content;
+  font-size: var(--font-small);
+  margin-bottom: var(--size-medium);
+  position: relative;
+}
+
+.hover__list .hover__list__contents::after {
+  content: "";
+  position: absolute;
+  bottom: 50%;
+  left: -10%;
+  width: 120%;
+  height: 1px;
+  background-color: var(--color-font);
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.3s ease;
+}
+
+.hover__list .hover__list__contents:hover::after {
+  transform: scaleX(1);
 }
 
 /* Main */
